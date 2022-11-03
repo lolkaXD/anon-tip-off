@@ -2,7 +2,7 @@
 
 
 define('app_name', 'AnonTip'); 
-define('app_desc', 'Upload Evidence Care Free'); 
+define('app_desc', ''); 
 
 
 define('FILELIST', "jpeg,jpg,gif,png,zip,xls,doc,mp3,mp4,mpeg,wav,avi,rar,7z,txt,pdf,docs,docx"); 
