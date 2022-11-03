@@ -1,18 +1,11 @@
 <?php
-/** 
- * AnonUpload Core File
- * @author Léo Berteloot <leo.berteloot@gmail.com>
- * @copyright Copyright (c) 2021, Léo Berteloot
-**/ 
+
 require_once 'config.php';
 
 class core
 {
     protected $timestamp;
-    /*
-    * @module File Type Verification
-    * @desc This Module check if a file is with the correct type (like png or zip). This option can be edit in config file
-    */
+
     public function FileTypeVerification($file){
         $filetype_list = array();
         $type = explode(",", FILELIST);
@@ -27,10 +20,6 @@ class core
         }
     }
 
-    /*
-    * @module File Size Verification
-    * @desc This Module check if the file size is correct or if is too high. This option can be disabled in config file
-    */
     public function FileSizeVerification($file){
         if(size_verification == true){
             if($file["size"] < max_size && $file["size"] > min_size){
@@ -43,10 +32,7 @@ class core
         }      
     }
 
-    /*
-    * @module File Name Convertor
-    * @desc This Module convert file name into a encrypted name. This option can be disabled in config file
-    */
+
     public function FileNameConvertor($file){
         $TransformFileName = substr(str_shuffle('abcdefghijklmnopqrstuvwxyzABCDEFGHIKLMNOPQRSTUVWXYZ123456789'), 0, 15);
         $filename = $TransformFileName.'-'.basename($_FILES["fileToUpload"]["name"]);
