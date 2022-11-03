@@ -8,7 +8,7 @@ $core = new Core();
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title><?= app_name; ?> - <?= app_desc; ?></title>
+	<title><?= app_name; ?><?= app_desc; ?></title>
 	<link rel="stylesheet" type="text/css" href="assets/main.css">
 	<style>img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {display: none;}</style>
 </head>
