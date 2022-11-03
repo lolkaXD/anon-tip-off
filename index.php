@@ -52,7 +52,7 @@ if(isset($_POST['submit'])){
 ?>
         <form method="post" action="" enctype="multipart/form-data">
 		  <input type="file" name="fileToUpload">
-		  <p>Insert evidence in this area.</p>
+		  <p>Insert evidence here.</p>
 		  <button name="submit" type="submit">Upload</button>
 		  <ul>
         		<li>Supported files: <?= FILELIST; ?></li> 
