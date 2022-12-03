@@ -8,9 +8,8 @@ $core = new Core();
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title><?= app_name; ?><?= app_desc; ?></title>
+	<title><?= app_name; ?> - <?= app_desc; ?></title>
 	<link rel="stylesheet" type="text/css" href="assets/main.css">
-	<style>img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {display: none;}</style>
 </head>
 <body>
 	<div class="wrapper">
@@ -23,7 +22,7 @@ if(isset($_POST['submit'])){
 			if($core->UploadFile($_FILES["fileToUpload"], $newfilename)){
 				?>
 				<div class="notification success">
-					Success ! Thank you. Your Evidence Was Uploaded Here: <a href="<?= file_url_destination.'/'.file_destination.'/'.$newfilename; ?>"><?= file_url_destination.'/'.file_destination.'/'.$newfilename; ?></a>
+					Success ! Your file are available here: <a href="<?= file_url_destination.'/'.file_destination.'/'.$newfilename; ?>"><?= file_url_destination.'/'.file_destination.'/'.$newfilename; ?></a>
 				</div>
 				<?php
 			}else{
@@ -52,7 +51,7 @@ if(isset($_POST['submit'])){
 ?>
         <form method="post" action="" enctype="multipart/form-data">
 		  <input type="file" name="fileToUpload">
-		  <p>Insert evidence here.</p>
+		  <p>Drag your files here or click in this area.</p>
 		  <button name="submit" type="submit">Upload</button>
 		  <ul>
         		<li>Supported files: <?= FILELIST; ?></li> 
